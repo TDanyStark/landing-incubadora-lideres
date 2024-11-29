@@ -1,0 +1,34 @@
+---
+import TextS from "@/components/TextS.astro";
+import { URL_BASE } from "@/config";
+
+const DOLORES = [
+  "¿Los buenos líderes de opinión se los pelean todos los laboratorios farmacéuticos y tu marca se convierte en una más?",
+  "¿Siempre contratas a los mismos speakers y en tus eventos se perdió el factor sorpresa?",
+  "¿Tenías aforos increíbles en tus eventos virtuales o presenciales y ahora no sabes a quién más contratar que tenga impacto y reconocimiento?",
+  "¿Los líderes actuales cobran un ojo de la cara porque ya tienen un posicionamiento importante y todos se los pelean?",
+  "¿Estás bajo de presupuesto para invertir en los honorarios que cobra un speaker de alta gama?"
+];
+---
+
+<section>
+  <div class="max-w-6xl mx-auto section-spacing-da flex flex-col md:flex-row gap-4">
+    <div class="flex-1 ">
+      <div class="relative w-4/5">
+        <div class="p-4 border-4 border-accent rounded-[3rem] bg-gradient-to-br from-accent to-thirdy">
+          <img src={`${URL_BASE}/images/dolores.webp`} alt="Persona preocupada frente a un computador" loading="lazy">
+        </div>
+        <div class="absolute w-44 text-center tracking-tight right-0 -m-20 text-4xl font-bold p-2 border-4 border-accent rounded-[3rem] bg-gradient-to-br from-accent to-thirdy">
+          <span>The key to the future</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 space-y-6 flex flex-col justify-center">
+      {
+        DOLORES.map((dolor) => (
+          <TextS text={dolor} />
+        ))
+      }
+    </div>
+  </div>
+</section>

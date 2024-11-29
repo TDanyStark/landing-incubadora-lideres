@@ -5,7 +5,7 @@ interface Props{
 }
 
 let { text, color } = Astro.props;
-color = color || 'secondary';
+color = color || 'text-secondary';
 ---
 
-<p>{text}</p>
+<p class={`${color} text-xl`}>{text}</p>
