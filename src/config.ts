@@ -1,0 +1,1 @@
+export const URL_BASE = '/l/incubadora-de-lideres';

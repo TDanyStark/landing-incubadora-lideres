@@ -1,0 +1,13 @@
+---
+interface Props{
+  text: string;
+  color?: string;
+  weigth?: string;
+}
+
+let { text, color, weigth } = Astro.props;
+color = color || 'secondary';
+weigth = weigth || 'font-bold';
+---
+
+<h2>{text}</h2>

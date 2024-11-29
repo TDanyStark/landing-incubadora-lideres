@@ -1,0 +1,19 @@
+---
+interface Props{
+  cta: string
+  size: string
+}
+
+let {cta, size} = Astro.props;
+size = size || 'text-4xl';
+---
+
+<a id="cta" class={`bg-accent text-primary font-bold inline-block shadow-accent px-6 py-2 rounded-3xl text-center ${size}`} href="#">
+  {cta}
+</a>
+
+<style>
+  #cta{
+    box-shadow:  0px 0px 15px 5px rgba(0, 255, 201, 0.3);
+  }
+</style>

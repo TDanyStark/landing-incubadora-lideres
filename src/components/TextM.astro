@@ -1,0 +1,11 @@
+---
+interface Props{
+  text: string;
+  color?: string;
+}
+
+let { text, color } = Astro.props;
+color = color || 'secondary';
+---
+
+<p>{text}</p>

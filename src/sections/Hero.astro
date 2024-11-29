@@ -1,0 +1,39 @@
+---
+import CallTOAction from "@/components/CallTOAction.astro";
+import Logos from "@/components/Logos.astro";
+import { URL_BASE } from "@/config";
+---
+
+<section>
+  <div
+    class="max-w-screen-2xl mx-auto bg-cover md:bg-center aspect-[167/94]"
+    style={`background-image:url(${URL_BASE}/images/hero.webp);`}
+  >
+    <div class="max-w-7xl mx-auto py-16 px-2">
+      <div class="w-[550px] max-w-full text-white">
+        <Logos />
+        <p class="text-lg md:text-2xl mt-16 text-center md:text-left">
+          BIENVENIDO A LA ERA EN DONDE
+          <span class="block font-bold">NO SIGUES TENDENCIAS, ¡¡LAS CREAS!!</span>
+        </p>
+        <div class="font-bold mt-8 text-center md:text-left">
+          <p class="text-thirdy text-3xl md:text-5xl">Bienvenido al Programa</p>
+          <h1 class="text-5xl md:text-8xl">INCUBADORA</br> DE LÍDERES</h1>
+        </div>
+        <p class="md:text-xl mt-8 text-center md:text-left">
+          ES HORA DE CONSTRUIR LÍDERES DE OPINIÓN QUE LUEGO APOYEN Y SEAN
+          EMBAJADORES DE TU MARCA.
+        </p>
+        <p class="md:text-xl mt-4 text-center md:text-left">
+          LA CONSTRUCCIÓN DE TUS LÍDERES DE OPÍNION <span class="block font-bold">COMIENZA AQUÍ</span>
+        </p>
+        <div class="mt-8">
+          <CallTOAction
+            cta="QUIERO PATROCINAR UN PAQUETE DE LÍDERES"
+            size="text-2xl md:text-3xl"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
