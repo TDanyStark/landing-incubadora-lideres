@@ -1,0 +1,45 @@
+---
+import TextXS from "@/components/TextXS.astro";
+import TitleH3 from "@/components/TitleH3.astro";
+import { URL_BASE } from "@/config";
+
+const ITEMS = [
+  "ENTRENAMIENTO DETALLADO EN LAS COMPETENCIAS QUE DEBE DESARROLLAR COMO LÍDER",
+  "ESTRATEGIAS CLAVE PARA POTENCIAR HABILIDADES EN EL DESARROLLO DE MARCA PERSONAL",
+  "INSTRUCTIVO DE CÓMO CONSTRUIR LIDERAZGO",
+  "ASESORÍA EN MODA, ESTILO Y TENDENCIAS DE UN LÍDER",
+  "ESTRATEGIAS Y HABILIDADES DE LA PUESTA EN ESCENA",
+  "CÓMO GENERAR CONTENIDO DIFERENTE",
+  "DESARROLLO Y CONSTRUCCIÓN DE REDES SOCIALES Y VISIBILIDAD ONLINE",
+  "ESTRATEGIAS PARA REPUTACIÓN Y CRISIS",
+  "ÉTICA, REGULACIÓN Y RESPONSABILIDAD SOCIAL",
+];
+---
+
+<section class="section-spacing-da">
+  <div class="max-w-4xl mx-auto px-2">
+    <div class="text-center">
+      <TitleH3
+        text="¿QUÉ OBTENDRÁ EL MÉDICO O PROFESIONAL DE LA SALUD QUE VIVA LA EXPERIENCIA DE</br>🏆INCUBADORA DE LÍDERES🏆?"
+      />
+    </div>
+    <ul
+      class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 mt-16 text-secondary"
+    >
+      {
+        ITEMS.map((item) => (
+          <li class="flex gap-4">
+            <div class="w-10 flex-shrink-0">
+              <img
+                class="w-full h-auto"
+                src={`${URL_BASE}/images/check.webp`}
+                alt="Icono check"
+              />
+            </div>
+            <TextXS text={item} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
