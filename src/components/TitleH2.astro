@@ -6,8 +6,8 @@ interface Props{
 }
 
 let { text, color, weigth } = Astro.props;
-color = color || 'secondary';
+color = color || 'text-accent';
 weigth = weigth || 'font-bold';
 ---
 
-<h2>{text}</h2>
+<h2 class={`${color} font-bold text-3xl md:text-5xl text-pretty`}>{text}</h2>

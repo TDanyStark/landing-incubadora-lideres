@@ -1,15 +1,15 @@
 ---
 interface Props{
-  cta: string
-  size: string
+  cta?: string
+  size?: string
 }
 
 let {cta, size} = Astro.props;
-size = size || 'text-4xl';
+size = size || 'text-2xl md:text-4xl';
+cta = cta || 'QUIERO PATROCINAR</br>UN PAQUETE DE LÍDERES';
 ---
 
-<a id="cta" class={`bg-accent text-primary font-bold inline-block shadow-accent px-6 py-2 rounded-3xl text-center ${size}`} href="#">
-  {cta}
+<a id="cta" class={`bg-accent text-primary font-bold inline-block shadow-accent px-6 py-2 rounded-3xl text-center ${size}`} href="#" set:html={cta}>
 </a>
 
 <style>
