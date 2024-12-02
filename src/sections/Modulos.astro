@@ -1,0 +1,68 @@
+---
+import TextS from "@/components/TextS.astro";
+import TitleH2 from "@/components/TitleH2.astro";
+import TitleH3 from "@/components/TitleH3.astro";
+import { URL_BASE } from "@/config";
+
+const MODULOSINFO = [
+  {
+    icon: "insignia",
+    text: "DESARROLLO DE MARCA PERSONAL"
+  },
+  {
+    icon: "youtube",
+    text: "GENERACIÓN DE CONTENIDO DIFERENTE"
+  },
+  {
+    icon: "ladder",
+    text: "CONSTRUCCIÓN DE LIDERAZGO"
+  },
+  {
+    icon: "RRSS",
+    text: "REDES SOCIALES Y VISIBILIDAD ONLINE"
+  },
+  {
+    icon: "clothes",
+    text: "MODA, ESTILO Y TENDENCIAS DE UN LÍDER"
+  },
+  {
+    icon: "tools",
+    text: "NETWORKING Y EVENTOS"
+  },
+  {
+    icon: "stage",
+    text: "ENTRENANDO LA PUESTA EN ESCENA"
+  },
+  {
+    icon: "user",
+    text: "REPUTACIÓN Y CRISIS"
+  },
+  {
+    icon: "hands",
+    text: "ÉTICA Y RESPONSABILIDAD SOCIAL"
+  }
+];
+---
+
+<section class="section-spacing-da">
+  <div class="max-w-4xl mx-auto text-center px-2">
+    <TitleH2 text="¿CÓMO CONSTRUIREMOS LÍDERES DE OPINIÓN EXITOSOS?" />
+    <div class="mt-20">
+      <TitleH3 text="MÓDULOS DEL PROGRAMA:" />
+    </div>
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+      {
+        MODULOSINFO.map((modulo) => (
+          <li class="flex items-center gap-4 md:gap-8 text-left">
+            <div class="flex items-center justify-center">
+              <img src={`${URL_BASE}/images/icons/${modulo.icon}.webp`} alt={modulo.text} class="min-w-20 h-16 object-contain" />
+            </div>
+            <TextS 
+              text={modulo.text}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

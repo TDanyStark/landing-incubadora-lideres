@@ -5,7 +5,7 @@ interface Props{
 }
 
 let { text, color } = Astro.props;
-color = color || 'secondary';
+color = color || 'text-accent';
 ---
 
-<h3>{text}</h3>
+<h3 class={`${color} font-bold text-3xl md:text-5xl text-pretty`}>{text}</h3>
