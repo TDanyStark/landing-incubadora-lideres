@@ -1,0 +1,32 @@
+---
+import CallTOAction from "../components/CallTOAction.astro";
+import LineaGradient from "../components/LineaGradient.astro";
+import { URL_BASE } from "@/config";
+import TitleH4 from "@/components/TitleH4.astro";
+---
+
+<section class="section-spacing-da pt-0 md:pt-32 overflow-clip">
+  <div class="max-w-4xl mx-auto text-center lg:text-left px-2">
+    <div class="border-4 rounded-3xl p-4 lg:p-8 border-accent flex flex-col lg:flex-row gap-8 items-center">
+      <div class="max-w-full lg:max-w-[60%]">
+        <TitleH4
+          text="¡¡ES HORA DE IMPACTAR Y RETOMAR LA ATENCIÓN DE TU PANEL DE MÉDICOS!!"
+        />
+        <div class="mt-10">
+          <TitleH4
+            text="CONSTRUYE LÍDERES DE OPINIÓN QUE LUEGO APOYEN Y SEAN EMBAJADORES DE TU MARCA"
+            weight="font-light"
+            color="text-secondary"
+          />
+        </div>
+      </div>
+      <div class="w-4/5 md:w-full flex lg:-mr-32 lg:-mt-32">
+        <img src={`${URL_BASE}/images/medicofeliz.webp`} alt="Medico feliz con sus dedos pulgares hacia arriba" class="mx-auto">
+      </div>
+    </div>
+    <div class="max-w-[500px] mx-auto mt-16">
+      <CallTOAction />
+    </div>
+    <LineaGradient />
+  </div>
+</section>

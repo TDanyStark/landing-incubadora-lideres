@@ -1,0 +1,13 @@
+---
+interface Props{
+  text: string;
+  weight?: string;
+  color?: string;
+}
+
+let { text, color, weight } = Astro.props;
+color = color || 'text-accent';
+weight = weight || 'font-bold';
+---
+
+<h3 class={`${color} ${weight} text-2xl md:text-4xl text-pretty`}>{text}</h3>
