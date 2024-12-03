@@ -1,0 +1,21 @@
+---
+import TitleH3 from "@/components/TitleH3.astro";
+import { URL_BASE, URL_WHATSAPP } from "@/config";
+---
+
+<section class="section-spacing-da overflow-clip">
+  <div class="max-w-4xl mx-auto px-2 space-y-8 lg:space-y-14">
+    <div class="text-center">
+      <TitleH3
+        text="¿NECESITAS AYUDA?"
+        color="text-secondary"
+        weight="font-light"
+      />
+    </div>
+    <div class="flex justify-center">
+      <a href={`${URL_WHATSAPP}`} target="_blank" rel="noopener noreferrer"  class="flex gap-6 lg:gap-8 bg-accent text-primary pl-2 lg:pl-6 py-2 pr-0 text-2xl text-center lg:text-4xl font-bold items-center rounded-full">
+        <span class="w-[76%] lg:w-full">CONTÁCTANOS VÍA WHATSAPP</span> <img class="w-10 scale-[2]" src={`${URL_BASE}/images/wsp.webp`} alt="Logo de whatsapp"/>
+      </a>
+    </div>
+  </div>
+</section>

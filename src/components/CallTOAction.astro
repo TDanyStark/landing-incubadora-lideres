@@ -1,4 +1,6 @@
 ---
+import { URL_WHATSAPP } from '@/config';
+
 interface Props{
   cta?: string
   size?: string
@@ -11,7 +13,7 @@ cta = cta || 'QUIERO PATROCINAR</br>UN PAQUETE DE LÍDERES';
 reverse = reverse || false;
 ---
 
-<a id="cta" class={`${reverse ? 'bg-primary text-accent':'bg-accent text-primary'} font-bold inline-block shadow-accent px-6 py-2 rounded-3xl text-center ${size}`} href="#" set:html={cta}>
+<a href={`${URL_WHATSAPP}`} target="_blank" rel="noopener noreferrer" id="cta" class={`${reverse ? 'bg-primary text-accent':'bg-accent text-primary'} font-bold inline-block shadow-accent px-6 py-2 rounded-3xl text-center ${size}`} set:html={cta}>
 </a>
 
 <style>

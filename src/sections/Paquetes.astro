@@ -1,8 +1,7 @@
 ---
-import CallTOAction from "@/components/CallTOAction.astro";
 import TextXS from "@/components/TextXS.astro";
 import TitleH2 from "@/components/TitleH2.astro";
-import TitleH3 from "@/components/TitleH3.astro";
+import TitleH4 from "@/components/TitleH4.astro";
 import { URL_BASE } from "@/config";
 
 const PAQUETES = [
@@ -27,11 +26,11 @@ const PAQUETES = [
 
 <section class="section-spacing-da">
   <div class="max-w-5xl mx-auto px-2">
-    <div class="degradado-con-degradado">
+    <div class="degradado-con-degradado space-y-16">
       <div class="text-center">
-        <TitleH2 text="PAQUETES DE LÍDERES EXCLUSIVOS DE LA INDUSTRIA FARMACÉUTICA" color="text-primary" />
+        <TitleH2 text="PAQUETES DE LÍDERES EXCLUSIVOS DE LA INDUSTRIA FARMACÉUTICA(*)" color="text-primary" />
       </div>
-      <ul class="mt-16">
+      <ul>
         {
           PAQUETES.map((item) => (
             <li class="flex flex-col md:flex-row justify-between py-4 px-2 border-b border-dotted border-primary gap-4">
@@ -60,14 +59,11 @@ const PAQUETES = [
           ))
         }
       </ul>
-      <div class="mt-16">
-        <img class="w-[550px] max-w-full mx-auto" src={`${URL_BASE}/images/price.webp`} alt="Precio Regular: $2.922 USD">
-      </div>
-      <div class="mt-12 text-center">
-        <TitleH3 text="PRECIO BLACK FRIDAY" color="text-primary" />
-        <div class="mt-4">
-          <img class="w-[650px] max-w-full mx-auto" src={`${URL_BASE}/images/497.webp`} alt="Precio 497 USD"/>
-        </div>
+      <div class="text-center">
+        <TitleH4
+          text="(*) Para compras superiores a 500 tickets se dará exclusividad de producto por laboratorio farmacéutico."
+          color="text-primary"
+        />
       </div>
     </div>
   </div>
