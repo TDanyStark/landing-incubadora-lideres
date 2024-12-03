@@ -1,0 +1,65 @@
+---
+import CallTOAction from "@/components/CallTOAction.astro";
+import LineaGradient from "@/components/LineaGradient.astro";
+import TextXS from "@/components/TextXS.astro";
+import TitleH3 from "@/components/TitleH3.astro";
+import { URL_BASE } from "@/config";
+
+const LIDERES = [
+  {
+    photo: "bayter",
+    name: "Bayter",
+    username: "@doctorbayter",
+  },
+  {
+    photo: "gabrielle",
+    name: "Gabrielle Lyon",
+    username: "@drgabriellelyon",
+  },
+  {
+    photo: "carlos",
+    name: "Carlos Jaramillo",
+    username: "@drcarlosjaramillo",
+  },
+];
+---
+
+<section class="section-spacing-da">
+  <div class="max-w-4xl mx-auto px-2">
+    <div class="text-center">
+      <TitleH3
+        text="CONSTRUYE LÍDERES DE OPINIÓN QUE LUEGO APOYEN Y SEAN EMBAJADORES DE TU MARCA"
+        color="text-secondary"
+        weight="font-light"
+      />
+    </div>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mt-16 text-secondary">
+      {
+        LIDERES.map((lider) => (
+          <li class="flex flex-col items-center">
+            <div class="mt-auto max-w-64 ">
+              <img
+                class="h-auto w-full"
+                src={`${URL_BASE}/images/lideres/${lider.photo}.webp`}
+                alt={`Doctor ${lider.name}`}
+              />
+            </div>
+            <div class="text-center">
+              <div class="my-8">
+                <TextXS text="Doctor" />
+                <TextXS text={lider.name} />
+              </div>
+              <TextXS text={lider.username} color="text-accent" />
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="text-center mt-20">
+      <CallTOAction/>
+    </div>
+    <div class="mt-20">
+      <LineaGradient />
+    </div>
+  </div>
+</section>

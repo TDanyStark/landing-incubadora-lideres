@@ -2,10 +2,12 @@
 interface Props{
   text: string;
   color?: string;
+  weight?: string;
 }
 
-let { text, color } = Astro.props;
+let { text, color, weight } = Astro.props;
 color = color || 'text-accent';
+weight = weight || 'font-bold';
 ---
 
-<h3 class={`${color} font-bold text-3xl md:text-5xl text-pretty`} set:html={text}></h3>
+<h3 class={`${color} ${weight} text-3xl md:text-5xl text-pretty`} set:html={text}></h3>

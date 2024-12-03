@@ -8,7 +8,7 @@ export default {
 				'secondary': 'rgb(255, 255, 255)',
 				'accent': '#00ffc9',
 				'thirdy': 'rgb(0, 186, 255)',
-			},
+			}
 		},
 	},
 	plugins: [],
