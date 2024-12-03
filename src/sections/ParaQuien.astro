@@ -1,0 +1,60 @@
+---
+import LineaGradient from "@/components/LineaGradient.astro";
+import TextXS from "@/components/TextXS.astro";
+import TitleH3 from "@/components/TitleH3.astro";
+import { URL_BASE } from "@/config";
+
+const ITEMS = [
+  {
+    photo: "med1",
+    descripcion: "Médicos y profesionales de la salud que no estén comprometidos con su crecimiento",
+  },
+  {
+    photo: "med2",
+    descripcion: "Médicos y profesionales de la salud que no puedan tolerar el éxito",
+  },
+  {
+    photo: "med3",
+    descripcion: "Médicos y profesionales de la salud que no estén dispuestos a ser figuras públicas",
+  }
+];
+---
+
+<section class="section-spacing-da">
+  <div class="max-w-4xl mx-auto px-2">
+    <div class="text-center">
+      <TitleH3
+        text="😵‍💫¿PARA QUIÉN <span class='text-secondary'>NO ES</span> INCUBADORA DE LÍDERES? 😵‍💫💫"
+      />
+    </div>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mt-20 text-secondary">
+      {
+        ITEMS.map((item) => (
+          <li>
+            <div class="h-80">
+              <img
+                class="h-full mx-auto"
+                src={`${URL_BASE}/images/${item.photo}.webp`}
+                alt={`Doctor ${item.descripcion}`}
+              />
+            </div>
+            <div>
+              <div class="w-4/5 mx-auto">
+                <LineaGradient size="mt-14" />
+              </div>
+            </div>
+            <div class="text-center my-8">
+              <TextXS text={item.descripcion} />
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="mt-20">
+      <TitleH3
+        text="PASA DE UNA LÍNEA DE NEGOCIOS SIN IMPACTO A TENER LÍDERES DE OPINIÓN QUE EMPUJEN TU MARCA CON PODER"
+        weight="font-light"
+      />
+    </div>
+  </div>
+</section>

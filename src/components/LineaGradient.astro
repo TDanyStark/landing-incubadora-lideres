@@ -1,1 +1,9 @@
-<div class="mt-20 h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+---
+interface Props{
+  size?: string
+}
+
+let {size = 'mt-20'} = Astro.props;
+---
+
+<div class={`${size} h-1 bg-gradient-to-r from-transparent via-accent to-transparent`}></div>
