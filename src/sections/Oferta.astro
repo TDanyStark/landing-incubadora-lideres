@@ -1,0 +1,92 @@
+---
+import CallTOAction from "@/components/CallTOAction.astro";
+import TextXS from "@/components/TextXS.astro";
+import TitleH3 from "@/components/TitleH3.astro";
+import { URL_BASE } from "@/config";
+
+const ITEMS = [
+  {
+    text: "9 ASUNTOS TRASCENDENTALES PARA UN LÍDER EN INCUBACIÓN",
+    price: "$1470",
+  },
+  {
+    text: "27 SESIONES PODEROSAS DE CRECIMIENTO",
+    price: "$497",
+  },
+  {
+    text: "9 INFOGRAFÍAS DE ESTUDIO",
+    price: "$170",
+  },
+  {
+    text: "FUNNEL HACKING - ¿CÓMO LO HACE LA COMPETENCIA?",
+    price: "$157",
+  },
+  {
+    text: "9 WORKBOOK PRÁCTICOS",
+    price: "$270",
+  },
+  {
+    text: "MEMBRESÍA COMUNIDAD INCUBADORA DE LÍDERES PARA ACCEDER A ENTRENAMIENTOS RELAMPAGOS Y COMUNIDAD",
+    price: "$179",
+  },
+  {
+    text: "SESIONES MENSUALES DE PREGUNTAS Y RESPUESTAS EN VIVO DURANTE LA VIGENCIA DE LA MEMBRESÍA",
+    price: "$179",
+  },
+];
+---
+
+<section class="section-spacing-da">
+  <div class="max-w-5xl mx-auto px-2">
+    <div class="relative z-20">
+      <img
+        class="mx-auto max-w-full w-[600px]"
+        src={`${URL_BASE}/images/ofter.webp`}
+        alt="Oferta Black Friday"
+      />
+    </div>
+    <div class="degradado-con-degradado">
+      <ul>
+        {
+          ITEMS.map((item) => (
+            <li class="flex flex-col md:flex-row justify-between py-4 px-2 border-b border-dotted border-primary gap-4">
+              <div class="flex-1 flex gap-4">
+                <div class="flex-shrink-0 w-8">
+                  <img
+                    src={`${URL_BASE}/images/check-blue.webp`}
+                    alt="Icono blue"
+                  />
+                </div>
+                <div class="flex-1">
+                  <TextXS
+                    text={item.text}
+                    weight="font-bold"
+                    color="text-primary"
+                    isBalanced={false}
+                  />
+                </div>
+              </div>
+              <div class="flex">
+                <div class="bg-primary p-2 min-w-20 text-center rounded-full mt-auto ml-auto">
+                  <TextXS text={item.price} color="text-white" />
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-16">
+        <img class="w-[550px] max-w-full mx-auto" src={`${URL_BASE}/images/price.webp`} alt="Precio Regular: $2.922 USD">
+      </div>
+      <div class="mt-12 text-center">
+        <TitleH3 text="PRECIO BLACK FRIDAY" color="text-primary" />
+        <div class="mt-4">
+          <img class="w-[650px] max-w-full mx-auto" src={`${URL_BASE}/images/497.webp`} alt="Precio 497 USD"/>
+        </div>
+      </div>
+    </div>
+    <div class="text-center -mt-12">
+      <CallTOAction reverse={true}/>
+    </div>
+  </div>
+</section>

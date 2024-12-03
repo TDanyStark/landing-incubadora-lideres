@@ -2,10 +2,14 @@
 interface Props{
   text: string;
   color?: string;
+  weight?: string;
+  isBalanced?: boolean;
 }
 
-let { text, color } = Astro.props;
+let { text, color, weight, isBalanced = true } = Astro.props;
 color = color || 'text-secondary';
+weight = weight || 'font-normal';
+isBalanced = isBalanced || false;
 ---
 
-<p class={`${color} text-xl text-balance`}>{text}</p>
+<p class={`${color} ${weight} text-xl ${isBalanced ? 'text-balance': ''}`}>{text}</p>
