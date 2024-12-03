@@ -1,54 +1,39 @@
 ---
 import CallTOAction from "@/components/CallTOAction.astro";
 import TextXS from "@/components/TextXS.astro";
+import TitleH2 from "@/components/TitleH2.astro";
 import TitleH3 from "@/components/TitleH3.astro";
 import { URL_BASE } from "@/config";
 
-const ITEMS = [
+const PAQUETES = [
   {
-    text: "9 ASUNTOS TRASCENDENTALES PARA UN LÍDER EN INCUBACIÓN",
-    price: "$1470",
+    text: "PAQUETES DE 50",
+    price: "$ 25.850",
   },
   {
-    text: "27 SESIONES PODEROSAS DE CRECIMIENTO",
-    price: "$497",
+    text: "PAQUETES DE 100",
+    price: "$ 49.700 – 8% DESCUENTO EXTRA",
   },
   {
-    text: "9 INFOGRAFÍAS DE ESTUDIO",
-    price: "$170",
+    text: "PAQUETES DE 500",
+    price: "$ 248.500 – 10% DESCUENTO EXTRA",
   },
   {
-    text: "FUNNEL HACKING - ¿CÓMO LO HACE LA COMPETENCIA?",
-    price: "$157",
-  },
-  {
-    text: "9 WORKBOOK PRÁCTICOS",
-    price: "$270",
-  },
-  {
-    text: "MEMBRESÍA COMUNIDAD INCUBADORA DE LÍDERES PARA ACCEDER A ENTRENAMIENTOS RELAMPAGOS Y COMUNIDAD",
-    price: "$179",
-  },
-  {
-    text: "SESIONES MENSUALES DE PREGUNTAS Y RESPUESTAS EN VIVO DURANTE LA VIGENCIA DE LA MEMBRESÍA",
-    price: "$179",
-  },
+    text: "PAQUETES DE 1000",
+    price: "$ 497.000 – 12% DESCUENTO EXTRA",
+  }
 ];
 ---
 
 <section class="section-spacing-da">
   <div class="max-w-5xl mx-auto px-2">
-    <div class="relative z-20">
-      <img
-        class="mx-auto max-w-full w-[600px]"
-        src={`${URL_BASE}/images/ofter.webp`}
-        alt="Oferta Black Friday"
-      />
-    </div>
-    <div class="degradado-con-degradado -mt-44">
-      <ul>
+    <div class="degradado-con-degradado">
+      <div class="text-center">
+        <TitleH2 text="PAQUETES DE LÍDERES EXCLUSIVOS DE LA INDUSTRIA FARMACÉUTICA" color="text-primary" />
+      </div>
+      <ul class="mt-16">
         {
-          ITEMS.map((item) => (
+          PAQUETES.map((item) => (
             <li class="flex flex-col md:flex-row justify-between py-4 px-2 border-b border-dotted border-primary gap-4">
               <div class="flex-1 flex gap-4">
                 <div class="flex-shrink-0 w-8">
@@ -84,9 +69,6 @@ const ITEMS = [
           <img class="w-[650px] max-w-full mx-auto" src={`${URL_BASE}/images/497.webp`} alt="Precio 497 USD"/>
         </div>
       </div>
-    </div>
-    <div class="text-center -mt-12 mb-12">
-      <CallTOAction reverse={true}/>
     </div>
   </div>
 </section>
