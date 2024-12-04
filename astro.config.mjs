@@ -7,6 +7,8 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  base: '/l/incubadora-de-lideres/',
-  outDir: 'l/incubadora-de-lideres/',
+  base: '/l/incubadora-de-lideres-s/',
+  outDir: 'l/incubadora-de-lideres-s/',
+  // base: '/l/incubadora-de-lideres/',
+  // outDir: 'l/incubadora-de-lideres/',
 });
